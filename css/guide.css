@@ -1,0 +1,85 @@
+/*  to set page margins - used in the body tag */
+#wrapper {    
+width: 750px;   
+margin: 0 auto; 
+} 
+
+/* to style to the common page header   */ 
+#header { 
+top:0px; 
+left: 0px; 
+height: 100px; 
+background-color: #369; 
+color: #fff;
+border:2px solid;
+border-radius:15px;
+box-shadow: 10px 10px 5px #888888;
+text-align:center
+} 
+
+/* styling menu */
+#menu ul
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: center;
+}
+
+/* styling menu - display in single line */
+#menu ul li { display: inline; }
+
+/* styling menu link text*/
+#menu ul li a
+{
+text-decoration: none;
+padding: .2em 1em;
+color: #fff;
+background-color: #036;
+border-radius:5px;
+box-shadow: 10px 10px 5px #888888;
+}
+
+/* styling menu - setting hover effect*/
+#menu ul li a:hover
+{
+color: #fff;
+background-color: #369;
+}
+
+
+/* to style the page content   */ 
+#pcontent { 
+background-color: #aabbff; 
+padding: .4em 4em;
+b/order:2px solid;
+border-radius:15px;
+box-shadow: 10px 10px 5px #888888;
+t/ext-align:center
+} 
+
+/* to style the text box on the Add Post page    */ 
+textarea {
+width: 500px;
+height: 6em;
+}
+
+/* to display error or warning text in red    */ 
+h5 {color:red;}
+
+/* to style table  */ 
+table
+{
+border-collapse:collapse;
+width:80%;
+}
+
+table, th, td
+{
+border: 1px solid blue;
+padding:5px;
+}
+
+/* to style the table alternative rows    */ 
+tr:nth-child(odd)	{ background-color:#eee; }
+tr:nth-child(even)	{ background-color:#fff; }

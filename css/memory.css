@@ -1,0 +1,72 @@
+* {
+	font-family:consolas;
+}
+
+body {
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right:350px;
+	margin-left:350px;
+}
+
+
+.allmain{
+	margin:auto;
+	width:98%;
+}
+
+.card {
+	cursor:pointer;
+	width:85px;
+	font-size:25px;
+	height:80px;
+	background-color:#AABBCC;
+	color:#AABBCC;
+	float:left;
+	padding-top:10px;
+	margin-bottom:20px;
+	margin-right:20px;
+	text-align:center;
+	border-style:solid;
+	border-width:1px;
+	border-color: white;
+	box-shadow: 10px 10px 5px #888888;
+	border:2px solid;
+	border-radius:10px;
+}
+
+
+h1 {	
+	text-align:center;
+	font-size:30px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+h2 {
+	font-size:15px;
+	margin-top:30px;
+	margin-bottom:5px;
+}
+
+.mylevel {
+	cursor:pointer;
+	width:80px;
+	height:20px;
+	border:1px solid #A9D0F5;
+	float:left;
+	margin-right:10px;
+	text-align:center;
+	background-color:#b0e0e6;
+	box-shadow: 10px 10px 5px #CEE3F6;
+	border:2px solid;
+	border-radius:10px;
+}
+
+.flipped {
+	color:#d0e0e6;
+}
+
+#scoreboard {
+	font-size:25px;
+}
