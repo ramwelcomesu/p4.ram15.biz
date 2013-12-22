@@ -33,6 +33,11 @@ body {
 	border-radius:10px;
 }
 
+.gamebottomtext{
+	float:none;	
+	width:80%;
+	height:470px;
+}
 
 
 
@@ -58,5 +63,9 @@ body {
 }
 
 #scoreboard {
-	font-size:25px;
+	font-size:15px;
+}
+
+.hideme{
+	display: none;
 }

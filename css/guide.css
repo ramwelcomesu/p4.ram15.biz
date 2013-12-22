@@ -16,7 +16,8 @@ border-color:#ff0000 #0000ff;
 border:1px solid;
 border-radius:15px;
 box-shadow: 10px 10px 5px #888888;
-text-align:center
+text-align:center;
+font-weight:bold
 } 
 
 /* styling menu */
@@ -39,7 +40,7 @@ padding: .2em 1em;
 color: #fff;
 background-color: #036;
 border-radius:5px;
-box-shadow: 10px 10px 5px #888888;
+box-shadow: 5px 5px 5px #888888;
 }
 
 /* styling menu - setting hover effect*/
@@ -88,7 +89,7 @@ tr:nth-child(even)	{ background-color:#fff; }
 
 
 a:link {color: #fff; text-decoration: none} 
-a:hover {color: #800000; text decoration: underlined; font-weight:bold;}
+a:hover {color: #800000; text decoration: underline; font-weight:bold; }
 
 h1 {	
 	text-align:center;

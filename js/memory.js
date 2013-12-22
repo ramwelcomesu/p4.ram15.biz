@@ -162,6 +162,8 @@ var Memory = {
 
 		// Dsiplay the updated scoreboard
 		this.scoreboard.html("Your Score: "+ this.points);
+		document.getElementById('score').value = this.points;
+		document.getElementById('level').value = how_many_cards;
 
 		//Record the previous card
 		this.prv_card  = divIdImage;
@@ -178,6 +180,7 @@ var Memory = {
 			this.prv_card = '';
 		};
 
+	
 		var nthis = this;
 		// to delay all open cards(including the last one opened) for half second before displaying the Game over message.
 		setTimeout(function() {
@@ -190,12 +193,15 @@ var Memory = {
 			
 			// When user clicks all card but not the danger, Game over - Won!
 			else if (fcc == how_many_cards - nthis.how_many_danger) {
+				
 				$('.board').html('Congratulation!! Level completed successfully, play again!.');	
-				//window.location.href = "/games/p_newg.php?gscore=" + nthis.points
-				//<?php 
-				//Router::redirect("/games/newg"); 
-				// echo hello; 
-				//?>
+				alert ('Congratulation!! You won!!  You scored  ' + document.getElementById('score').value +' points. Play again!.');
+				var elem = document.getElementById('clickbutton'); 
+		   		if (elem.click) { 
+		             elem.click(); 
+		        } else if (elem.onclick) { 
+		        	elem.onclick(); 
+		        } 
 			};
 
 		}, 500);  // 2 seconds

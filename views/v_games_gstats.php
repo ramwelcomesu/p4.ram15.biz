@@ -10,6 +10,5 @@
 		    </time>
 	    <?=$stat['score']?></p>
 <?php endforeach; ?>
-		
-	t = $('stats')
-    $.uiTableFilter( t, phrase )
+
+

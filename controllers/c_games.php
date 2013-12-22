@@ -19,41 +19,39 @@ class games_controller extends base_controller {
         
         # Build the query to display only post related to the current user 
         #This is one of the extra (+1) feature
-        $q = "SELECT * FROM gscore WHERE user_id =".$this->user->user_id;
-        # Run the query
-        $stats = DB::instance(DB_NAME)->select_rows($q);
+        
 
+        $q = "SELECT MAX(score) as score FROM gscore WHERE user_id =".$this->user->user_id ;
+       // $q = "SELECT * FROM gscore WHERE user_id =".$this->user->user_id;
+        # Run the query
+
+        $gstats = DB::instance(DB_NAME)->select_rows($q);
+        
         # Pass data to the View
-        $this->template->content->stats = $stats;
+        $this->template->content->gstats = $gstats;
 
         # Pass error data to the view
         $this->template->content->error = $error;
 
         # Render template
         echo $this->template;
-
     }
 
     public function p_newg() {
       // echo .$_GET['gscore']);
 
-        if(empty($_POST['content'])) {
-           Router::redirect("/stats/add/error");
-        } 
-        
         # Associate this post with this user
         $_POST['user_id']  = $this->user->user_id;
 
         # Unix timestamp of when this post was created / modified
         $_POST['created']  = Time::now();
-        $_POST['modified'] = Time::now();
-
+      
         # Insert
         # Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
-        DB::instance(DB_NAME)->insert('stats', $_POST);
+        DB::instance(DB_NAME)->insert('gscore', $_POST);
 
         # Redirect to the add page
-        Router::redirect("/stats/add");
+       Router::redirect("/games/newg");
     }
 
     
