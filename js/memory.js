@@ -186,11 +186,16 @@ var Memory = {
 			{
 				$('.board').html('Game Over! You lost, try again!');	
 				$('.scoreboard').html('');	
-			};
+			}
 			
 			// When user clicks all card but not the danger, Game over - Won!
-			if (fcc == how_many_cards - nthis.how_many_danger) {
+			else if (fcc == how_many_cards - nthis.how_many_danger) {
 				$('.board').html('Congratulation!! Level completed successfully, play again!.');	
+				//window.location.href = "/games/p_newg.php?gscore=" + nthis.points
+				//<?php 
+				//Router::redirect("/games/newg"); 
+				// echo hello; 
+				//?>
 			};
 
 		}, 500);  // 2 seconds

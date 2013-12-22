@@ -4,11 +4,11 @@
 
 	<article>
 
-	    <h4><?=$post['first_name']?> <?=$post['last_name']?>  --  Posted on 
+	    <b><?=$post['first_name']?> <?=$post['last_name']?>  --  Posted on 
 		    <time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">
 		        <?=Time::display($post['created'])?>
 		    </time>
-		</h4>
+		</b>
 
 	    <p><?=$post['content']?></p>
 		<hr>

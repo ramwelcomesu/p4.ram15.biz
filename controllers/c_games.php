@@ -19,12 +19,12 @@ class games_controller extends base_controller {
         
         # Build the query to display only post related to the current user 
         #This is one of the extra (+1) feature
-        $q = "SELECT * FROM posts WHERE user_id =".$this->user->user_id;
+        $q = "SELECT * FROM gscore WHERE user_id =".$this->user->user_id;
         # Run the query
-        $posts = DB::instance(DB_NAME)->select_rows($q);
+        $stats = DB::instance(DB_NAME)->select_rows($q);
 
         # Pass data to the View
-        $this->template->content->posts = $posts;
+        $this->template->content->stats = $stats;
 
         # Pass error data to the view
         $this->template->content->error = $error;
@@ -35,9 +35,10 @@ class games_controller extends base_controller {
     }
 
     public function p_newg() {
+      // echo .$_GET['gscore']);
 
         if(empty($_POST['content'])) {
-           Router::redirect("/posts/add/error");
+           Router::redirect("/stats/add/error");
         } 
         
         # Associate this post with this user
@@ -49,13 +50,47 @@ class games_controller extends base_controller {
 
         # Insert
         # Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
-        DB::instance(DB_NAME)->insert('posts', $_POST);
+        DB::instance(DB_NAME)->insert('stats', $_POST);
 
         # Redirect to the add page
-        Router::redirect("/posts/add");
+        Router::redirect("/stats/add");
     }
 
     
+
+    # to display list of all users with follow and unfollow option
+    public function gstats() {
+        # Set up the View
+        $this->template->content = View::instance('v_games_gstats');
+        $this->template->title   = "Memory Gamming :: Game Stats";
+
+        # Query
+        $q = 'SELECT 
+                gscore.level,
+                gscore.score,
+                gscore.created,
+                gscore.user_id AS post_user_id,
+                users_users.user_id AS follower_id,
+                users.first_name,
+                users.last_name
+            FROM gscore
+            INNER JOIN users_users 
+                ON gscore.user_id = users_users.user_id_followed
+            INNER JOIN users 
+                ON gscore.user_id = users.user_id
+            WHERE users_users.user_id = '.$this->user->user_id;
+
+        # Run the query, store the results in the variable $stats
+        $stats = DB::instance(DB_NAME)->select_rows($q);
+
+        # Pass data to the View
+        $this->template->content->stats = $stats;
+
+        # Render the View
+        echo $this->template;
+
+    }
+
 
 
 } # end of the class

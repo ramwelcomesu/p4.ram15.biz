@@ -28,11 +28,11 @@
 
 	<article>
 
-	    <h4>Posted on 
+	    <b>Posted on 
 		    <time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">
 		        <?=Time::display($post['created'])?>
 		    </time>
-		</h4>
+		</b>
 
 	    <p><?=$post['content']?></p>
 		<hr>
