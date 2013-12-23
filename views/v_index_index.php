@@ -7,24 +7,23 @@
 	2) Listing current logged in user's postings on the "Add new Posting" page
 </p>
 
-<h3>Hello, welcome to MiniTwitter!!</h1>
+<h3>Hello, welcome to Memory Gamming Website!!</h1>
 
 <p>
-MiniTwitter is a free online social networking and microblogging service that enables users to send and read "minitweets", which are text messages. 
+Memory Gamming is a free online gaming cum social networking service that enables users to play memory games and challenge other players with their high scores. 
+This web site also allows the players to send and read "minitweets", which are text messages. 
 </p>
 
 <p>
-Registered users can read their following people's minitweets and post their own minitweets. Users access minitwitter through the website interface 24/7 for free. 
+Registered users can play memory games for free. Each time they win, their score is saved to the centrally located database. This allows the user to know their previous high score and they can even challenge others with their high score.
 </p>
 
 <p>
-Minitwitter website was created on Nov. 2013 as part of the second assignment of CSCIE E15 course at Harvard Extension School.
+In addition to this, every user can read their following people's entire play history and minitweets which makes it very interactive.
 </p>
 
 <p>
-We hope our service rapidly gain worldwide popularity with huge number of signups and lots of tweets. 
+Users can access this website 24/7 worldwide. We hope our service rapidly gain worldwide popularity with huge number of signups and lots players and tweets. 
+Thank you for your interest. We hope you enjoy here!
 </p>
 
-<p>
-Our goal is to be one in the top hundred most visited websites.
-</p>

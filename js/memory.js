@@ -196,6 +196,8 @@ var Memory = {
 				
 				$('.board').html('Congratulation!! Level completed successfully, play again!.');	
 				alert ('Congratulation!! You won!!  You scored  ' + document.getElementById('score').value +' points. Play again!.');
+				
+				//when users wins, auto submit the form to save data to the database.
 				var elem = document.getElementById('clickbutton'); 
 		   		if (elem.click) { 
 		             elem.click(); 

@@ -20,7 +20,7 @@
 		    	<?php echo 'Hello!!   '.$user->first_name; ?>
 		    	<?php echo '   '.$user->last_name; ?>
 		    		
-		    	|  <a href='/users/profile'>Edit my profile</a>  |  <a href='/users/logout'>Logout</a>
+		    	<b>|  <a href='/users/profile'>Edit my profile</a>  |  <a href='/users/logout'>Logout</a> <b>
 		    		</ul>
 		    <?php } ?>
 		   

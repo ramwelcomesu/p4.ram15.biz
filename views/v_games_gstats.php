@@ -1,4 +1,4 @@
-<!-- This page will display all the stat of the users who are being followed by the current logged in user -->
+<!-- This page will display all the play stat of the users who are being followed by the current logged in user -->
 <br>
 Play history of all the people you are following.
 <br>

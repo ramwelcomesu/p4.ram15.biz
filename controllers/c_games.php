@@ -10,14 +10,14 @@ class games_controller extends base_controller {
         }
     }
 
-    # To let add new post
+    # To let user play new game
     public function newg($error = NULL) {
 
         # Setup view
         $this->template->content = View::instance('v_games_newg');
         $this->template->title   = "New Game";
         
-        # Build the query to display only post related to the current user 
+        # Build the query to display high scores of 4 levels related to the current user 
         $q1 = "SELECT MAX(score) as score FROM gscore WHERE level = '5' and user_id =".$this->user->user_id ;
         $q2 = "SELECT MAX(score) as score FROM gscore WHERE level = '10' and user_id =".$this->user->user_id ;
         $q3 = "SELECT MAX(score) as score FROM gscore WHERE level = '15' and user_id =".$this->user->user_id ;
@@ -40,6 +40,7 @@ class games_controller extends base_controller {
         echo $this->template;
     }
 
+    # this is to insert winning score of the current user in the database.
     public function p_newg() {
       // echo .$_GET['gscore']);
 
@@ -56,10 +57,9 @@ class games_controller extends base_controller {
         # Redirect to the add page
        Router::redirect("/games/newg");
     }
+   
 
-    
-
-    # to display list of all users with follow and unfollow option
+    # to display list of all following users play statistics.
     public function gstats() {
         # Set up the View
         $this->template->content = View::instance('v_games_gstats');
