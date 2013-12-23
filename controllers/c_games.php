@@ -18,17 +18,20 @@ class games_controller extends base_controller {
         $this->template->title   = "New Game";
         
         # Build the query to display only post related to the current user 
-        #This is one of the extra (+1) feature
-        
-
-        $q = "SELECT MAX(score) as score FROM gscore WHERE user_id =".$this->user->user_id ;
-       // $q = "SELECT * FROM gscore WHERE user_id =".$this->user->user_id;
+        $q1 = "SELECT MAX(score) as score FROM gscore WHERE level = '5' and user_id =".$this->user->user_id ;
+        $q2 = "SELECT MAX(score) as score FROM gscore WHERE level = '10' and user_id =".$this->user->user_id ;
+        $q3 = "SELECT MAX(score) as score FROM gscore WHERE level = '15' and user_id =".$this->user->user_id ;
+        $q4 = "SELECT MAX(score) as score FROM gscore WHERE level = '20' and user_id =".$this->user->user_id ;
         # Run the query
-
-        $gstats = DB::instance(DB_NAME)->select_rows($q);
-        
+        $gstats1 = DB::instance(DB_NAME)->select_rows($q1);
+        $gstats2 = DB::instance(DB_NAME)->select_rows($q2);
+        $gstats3 = DB::instance(DB_NAME)->select_rows($q3);
+        $gstats4 = DB::instance(DB_NAME)->select_rows($q4);
         # Pass data to the View
-        $this->template->content->gstats = $gstats;
+        $this->template->content->gstats1 = $gstats1;
+        $this->template->content->gstats2 = $gstats2;
+        $this->template->content->gstats3 = $gstats3;
+        $this->template->content->gstats4 = $gstats4;
 
         # Pass error data to the view
         $this->template->content->error = $error;
