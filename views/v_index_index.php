@@ -1,13 +1,7 @@
 
 <!-- This is the landing page content -->
-<h2> Below listed are my +1 features</h2>
-<p>
-	1) Edit profile cabability for the currenly logged in user.
-	<br>
-	2) Listing current logged in user's postings on the "Add new Posting" page
-</p>
 
-<h3>Hello, welcome to Memory Gamming Website!!</h1>
+<h3>Hello and welcome to Memory Gamming Website!!</h1>
 
 <p>
 Memory Gamming is a free online gaming cum social networking service that enables users to play memory games and challenge other players with their high scores. 
