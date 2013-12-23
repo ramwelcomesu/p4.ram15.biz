@@ -75,7 +75,7 @@ var Memory = {
 			};
 			
 			// Add the card with the image to the array
-			cardsArr[i] = "<div class='card clickable' id='" + random_letter + i +"' clicked=''> <img src= '/images/" + random_letter + ".PNG'/> </div>";	
+			cardsArr[i] = "<div class='card clickable' id='" + random_letter + i +"' clicked=''> <img src= '/images/" + random_letter + ".png'/> </div>";	
 			
 			//Generate a random letter from  our alphabet array 
 			random_letter = this.alphabet[Math.floor(this.alphabet.length * Math.random())];
@@ -91,7 +91,7 @@ var Memory = {
 
 		// Replace images from the div tages and just have the alphabets. So that string can be used to hide the images.
 		cardsStrCode = cardsStr.replace(/<img src= '\/images\//g,"");
-		cardsStrCode = cardsStrCode.replace(/.PNG'\/>/g,"");
+		cardsStrCode = cardsStrCode.replace(/.png'\/>/g,"");
 
 		// Now inject the cards string into the game board
 		this.board.html(cardsStr);
@@ -133,7 +133,7 @@ var Memory = {
 		var divIdImage = divId.substr(0,1);
 
 		//add image to the currently selected card's div. 
-		var repStrN = "<img src= '/images/"+divIdImage+".PNG'/> </div>";
+		var repStrN = "<img src= '/images/"+divIdImage+".png'/> </div>";
 		
 		//display the image for the selected card	
 		cardObj.html(repStrN);	
